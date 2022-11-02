@@ -18,6 +18,7 @@ jobs:
     - run: cd hexodemo
     - run: ls
     - run: pwd
+    - run: npm install 
     - run: npm install -g hexo
     - run: hexo g
     - run: tar -zcvf release.tgz public

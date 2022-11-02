@@ -13,6 +13,8 @@ jobs:
     # 第二步：打包构建
     - name: Build
       uses: actions/setup-node@master
+    - run: ls
+    - run: pwd
     - run: cd hexodemo
     - run: ls
     - run: npm install -g hexo

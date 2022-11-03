@@ -9,7 +9,17 @@ jobs:
     # 第一步：下载源码（CI/CD拉取代码到自己的本地）
     - name: Checkout
       uses: actions/checkout@main
-
+      
+      
+    - name: Remove Release
+      uses: actions/checkout@main
+      with:
+          delete_release: true # default: false
+          tag_name: main # tag name to delete
+          repo: https://github.com/kiaser/hexodemo # target repo (optional). defaults to repo running this action
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
     # 第二步：打包构建
     - name: Build
       uses: actions/setup-node@master

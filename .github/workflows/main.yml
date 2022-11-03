@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@main
       with:
           delete_release: true # default: false
-          tag_name: ${{ github.ref }} # tag name to delete
+          tag_name: refs/heads/main # tag name to delete
           repo: https://github.com/kiaser/hexodemo # target repo (optional). defaults to repo running this action
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

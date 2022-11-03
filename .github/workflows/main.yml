@@ -18,7 +18,7 @@ jobs:
           tag_name: refs/heads/main # tag name to delete
           repo: https://github.com/kiaser/hexodemo # target repo (optional). defaults to repo running this action
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
     # 第二步：打包构建
     - name: Build

@@ -66,4 +66,7 @@ jobs:
           wget https://github.com/kiaser/hexodemo/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
           yes | cp -r -f public/* ./
-
+          docker rm -f kiaserblog
+          docker rmi -f kiaserblog:latest
+          docker build -t kiaserblog:latest .
+          docker run --name kiaserblog -p 8082:80 -d kiaserblog:latest

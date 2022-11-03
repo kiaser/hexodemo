@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       
-      
+    # 删除realse有问题  
     - name: Remove Release
       uses: actions/checkout@main
       with:

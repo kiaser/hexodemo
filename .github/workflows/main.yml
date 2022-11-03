@@ -13,7 +13,7 @@ jobs:
     # 第二步：打包构建
     - name: Build
       uses: actions/setup-node@master
-    - run:  npm install hexo-cli -g
+    - run:  npm install hexo
     - run:  hexo g
     - run: tar -zcvf release.tgz public
     # 把dist等文件，打包压缩为release.tgz

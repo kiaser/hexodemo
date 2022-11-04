@@ -17,8 +17,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "/db.json"        # 上传tests下所有文件
-        target: "hexo-upload"   # 上传在root/ 下
+        source: "Blog/*"        # 上传tests下所有文件
+        target: "/usr/src/hexo-upload"   # 上传在root/ 下
 
     # 第三步：部署到服务器
     - name: Deploy

@@ -1,6 +1,5 @@
 name: Auto Publish Website # 自动部署的名称
-on:
-  push
+on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 运行环境，告诉它运行在什么环境

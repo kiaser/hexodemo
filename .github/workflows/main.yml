@@ -16,5 +16,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "/*"        # 上传tests下所有文件
+        source: "/db.json"        # 上传tests下所有文件
         target: "/usr/src/hexo-upload"   # 上传在root/ 下

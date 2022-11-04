@@ -10,14 +10,14 @@ jobs:
       uses: actions/checkout@main
       
     # 删除realse有问题  
-    - name: Remove Release
-      uses: dev-drprasad/delete-tag-and-release@v0.2.0
-      with:
-          delete_release: true # default: false
-          tag_name: refs/heads/main # tag name to delete
-          repo: kiaser/hexodemo # target repo (optional). defaults to repo running this action
-      env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    # - name: Remove Release
+    #   uses: dev-drprasad/delete-tag-and-release@v0.2.0
+    #  with:
+    #      delete_release: true # default: false
+    #     tag_name: refs/heads/main # tag name to delete
+    #      repo: kiaser/hexodemo # target repo (optional). defaults to repo running this action
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
     # 第二步：打包构建
     - name: Build
